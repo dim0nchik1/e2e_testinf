@@ -1,31 +1,25 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
-import jest from "eslint-plugin-jest";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier";
+import pluginReact from "eslint-plugin-react";
+import jest from "eslint-plugin-jest"
 
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
-  },
+  {files: ["**/*.{js,mjs,cjs,jsx}"]},
+  {settings:{react: {version: "999.999.999"}}},
+  {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
-  eslintPluginPrettierRecommended,
-  {
+  pluginReact.configs.flat.recommended,
+
+  {settings:{react: {version: "999.999.999"}}},
+  {ignores:["src/e2e/",".eslintrc.js","webpack.prod.js","webpack.common.js","webpack.dev.js"
+    ]},
+  {files: ['**/*.test.js'],
+    ...jest.configs['flat/recommended'],
     rules: {
-      "no-unused-vars": "warn",
-    },
-  },
-  {
-    ignores: ["dist/*", "coverage/*"],
-  },
-  {
-    files: ["**/*.test.js"],
-    ...jest.configs["flat/recommended"],
-    rules: {
-      ...jest.configs["flat/recommended"].rules,
-      "jest/prefer-expect-assertions": "off",
-      "jest/expect-expect": "error",
-    },
-  },
-];
+      ...jest.configs['flat/recommended'].rules,
+
+    }
+  }
+  ]
