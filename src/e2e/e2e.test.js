@@ -2,9 +2,9 @@ import puppetteer from "puppeteer";
 import { fork } from "child_process";
 jest.setTimeout(30000);
 describe("test validator form", () => {
-  let browser = null;
-  let page = null;
-  let server = null;
+  let browser;
+  let page;
+  let server;
   const baseUrl = "http://localhost:9002";
 
   beforeAll(async () => {
