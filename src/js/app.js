@@ -1,4 +1,4 @@
-import validate from "./validator";
+import validate from "./validator.js";
 import paySystem from "./paySystem";
 
 document.querySelector("#card-submit").addEventListener("click", (event) => {
