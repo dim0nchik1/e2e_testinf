@@ -1,5 +1,5 @@
 # Домашнее задание к занятию "4.Организация тестирования"
-![CI](https://github.com/dim0nchik1/of_testing/actions/workflows/web.yml/badge.svg)
+![CI][https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true]
 
 Правила сдачи задания:
 
