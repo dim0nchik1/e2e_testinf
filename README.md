@@ -1,6 +1,5 @@
 # Домашнее задание к занятию "4.Организация тестирования"
-![https://ci.appveyor.com/api/e2e_testinf/status/32r7s2skrgm9ubva?svg=true](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)
-
+[![Статус сборки](https://ci.appveyor.com/api/projects/status/4b644h4mfbx2s73g?svg=true)](https://ci.appveyor.com/project/dim0nchik1/e2e-testinf)
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
