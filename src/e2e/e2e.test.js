@@ -18,7 +18,7 @@ describe("test validator form", () => {
       });
     });
     browser = await puppetteer.launch({
-      headless: false, // show gui
+      headless: true, // show gui
       slowMo: 100,
 
       // devtools: true, // show devTools
@@ -42,14 +42,14 @@ describe("test validator form", () => {
     await page.waitForSelector(".cardVisa.active");
   });
 
-  // test("AmericanExpress", async () => {
-  //   await page.goto(baseUrl);
-  //   const input = await page.$("#numberCard-input");
-  //   await input.type("340054986290712");
-  //   const submit = await page.$("#card-submit");
-  //   await submit.click();
-  //   await page.waitForSelector(".cardAmericanExpress.active");
-  // }, 35000);
+  test("AmericanExpress", async () => {
+    await page.goto(baseUrl);
+    const input = await page.$("#numberCard-input");
+    await input.type("340054986290712");
+    const submit = await page.$("#card-submit");
+    await submit.click();
+    await page.waitForSelector(".cardAmericanExpress.active");
+  });
 
 
 });
